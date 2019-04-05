@@ -120,7 +120,12 @@ add_action( 'widgets_init', 'dgc_widgets_init' );
  * Enqueue scripts and styles.
  */
 function dgc_scripts() {
-	wp_enqueue_style( 'dgc-style', get_stylesheet_uri() );
+	if ( 'localhost' != $_SERVER['SERVER_NAME'] ) :
+		wp_enqueue_style( 'dgc-style', get_stylesheet_uri() );
+	else :
+		wp_enqueue_style( 'dgc-style-build', trailingslashit( get_template_directory_uri() ) . 'build/style.css' );
+	endif;
+
 
 	wp_enqueue_script( 'dgc-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
