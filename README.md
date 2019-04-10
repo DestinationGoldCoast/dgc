@@ -1,7 +1,6 @@
 DGC
 ===
 
-Hi.
 
 Development
 ---------------
