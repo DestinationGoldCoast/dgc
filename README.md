@@ -29,5 +29,14 @@ Each task has a link to the npm package with install instructions (if needed).
 Dev Time:
 Once you have gulp running, you just need to run 'gulp watch' from the cmd promot while in the build folder. Now you can make changes and everything will recompile.
 
+Note: The stylesheet that is enqueued will vary depending on the environmnet, eg, localhost:81 is my local environmnet so a non minified stylesheet is loaded.
+
+
+
+Production
+---------------
+As part of the build process, there is a gulp task to get some files ready for production, the need to know:
+- style.css is a minified version of build/css/style.css
+
 Credits
 - _s is the base theme by Automattic - https://underscores.me/

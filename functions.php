@@ -120,7 +120,7 @@ add_action( 'widgets_init', 'dgc_widgets_init' );
  * Enqueue scripts and styles.
  */
 function dgc_scripts() {
-	if ( 'localhost' != $_SERVER['SERVER_NAME'] ) :
+	if ( 'localhost:81' != $_SERVER['HTTP_HOST'] ) :
 		// Time to get the minified style.css
 		wp_enqueue_style( 'dgc-style-build', trailingslashit( get_template_directory_uri() ) . '/style.css' );
 	else :
