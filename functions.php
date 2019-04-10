@@ -122,7 +122,7 @@ add_action( 'widgets_init', 'dgc_widgets_init' );
 function dgc_scripts() {
 	if ( 'localhost' != $_SERVER['SERVER_NAME'] ) :
 		// Time to get the minified style.css
-		wp_enqueue_style( 'dgc-style-build', trailingslashit( get_template_directory_uri() ) . '/style.min.css' );
+		wp_enqueue_style( 'dgc-style-build', trailingslashit( get_template_directory_uri() ) . '/style.css' );
 	else :
 		wp_enqueue_style( 'dgc-style', trailingslashit( get_template_directory_uri() ) . 'build/css/style.css' );
 	endif;
