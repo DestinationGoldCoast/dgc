@@ -120,12 +120,11 @@ add_action( 'widgets_init', 'dgc_widgets_init' );
  * Enqueue scripts and styles.
  */
 function dgc_scripts() {
-	// If we are working local get the non-minified style.css
 	if ( 'localhost' != $_SERVER['SERVER_NAME'] ) :
-		wp_enqueue_style( 'dgc-style', get_stylesheet_uri() );
-	else :
 		// Time to get the minified style.css
-		wp_enqueue_style( 'dgc-style-build', trailingslashit( get_template_directory_uri() ) . 'build/style.min.css' );
+		wp_enqueue_style( 'dgc-style-build', trailingslashit( get_template_directory_uri() ) . '/style.min.css' );
+	else :
+		wp_enqueue_style( 'dgc-style', trailingslashit( get_template_directory_uri() ) . 'build/css/style.css' );
 	endif;
 
 
