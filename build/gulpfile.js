@@ -78,6 +78,7 @@ gulp.task('min-css', function() {
  * WATCH.
  * @requires sass
  * @description watches files and runs tasks when a file is saved.
+ * Use 'gulp watch' to run and let all he magic happen.
  */
 gulp.task('watch', function() {
     gulp.watch('sass/**/*.scss', gulp.series('sass'));
