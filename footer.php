@@ -37,5 +37,7 @@
 
 <?php wp_footer(); ?>
 
+<?php do_action( 'hook_after_html' ); ?>
+
 </body>
 </html>

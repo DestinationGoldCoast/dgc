@@ -30,6 +30,18 @@ Once you have gulp running, you just need to run 'gulp watch' from the cmd promo
 
 Note: The stylesheet that is enqueued will vary depending on the environmnet, eg, localhost:81 is my local environmnet so a non minified stylesheet is loaded.
 
+Hooks:
+There are built in hooks to help with the seperation of view and functionality. A hook allows you to 'hook' a function to a location in the html.
+
+Hook list:
+- hook_before_html
+-- After the opening <body> tag.
+-- Template: header.php
+
+- hook_after_html
+-- Before the closing </body> tag.
+-- Template: footer.php
+
 
 
 Production
