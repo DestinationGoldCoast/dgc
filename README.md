@@ -34,13 +34,13 @@ Hooks:
 There are built in hooks to help with the seperation of view and functionality. A hook allows you to 'hook' a function to a location in the html.
 
 Hook list:
-- hook_before_html
--- After the opening <body> tag.
--- Template: header.php
+* hook_before_html
+	* After the opening <body> tag.
+	* Template: header.php
 
-- hook_after_html
--- Before the closing </body> tag.
--- Template: footer.php
+* hook_after_html
+	* Before the closing </body> tag.
+	* Template: footer.php
 
 
 
