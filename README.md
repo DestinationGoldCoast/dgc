@@ -45,5 +45,5 @@ There are built in hooks to help with the seperation of view and functionality. 
 As part of the build process, there is a gulp task to get some files ready for production, the need to know:
 * style.css is a minified version of build/css/style.css
 
-Credits
+## Credits ##
 * _s is the base theme by Automattic - https://underscores.me/
