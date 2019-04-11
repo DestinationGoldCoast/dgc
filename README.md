@@ -62,11 +62,27 @@ There are built in hooks to help with the seperation of view and functionality. 
 
 * hook_bottom_content
 	* Before the closing id="content" </div> tag.
-	* File footer.php
+	* File: footer.php
 
 * hook_after_content
 	* After the closing id="content" </div> tag.
-	* File footer.php
+	* File: footer.php
+
+* hook_before_aside
+	* Before the opening <aside> tag.
+	* File: sidebar.php
+
+* hook_top_aside
+	* After the opening <aside> tag.
+	* File: sidebar.php
+
+* hook_bottom_aside
+	* Before the closing </aside> tag.
+	* File: sidebar.php
+
+* hook_after_aside
+	* After the closing </aside> tag.
+	* File: sidebar.php
 
 * hook_after_html
 	* Before the closing </body> tag.
