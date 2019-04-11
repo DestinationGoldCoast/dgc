@@ -84,6 +84,22 @@ There are built in hooks to help with the seperation of view and functionality. 
 	* After the closing </aside> tag.
 	* File: sidebar.php
 
+* hook_before_footer
+	* Before opening <footer> tag.
+	* File: footer.php
+
+* hook_top_footer
+	* After opening <footer> tag.
+	* File: footer.php
+
+* hook_bottom_footer
+	* Before closing </footer> tag.
+	* File: footer.php
+
+* hook_after_footer
+	* After closing </footer> tag.
+	* File: footer.php
+
 * hook_after_html
 	* Before the closing </body> tag.
 	* File: footer.php
