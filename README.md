@@ -32,78 +32,7 @@ Note: The stylesheet that is enqueued will vary depending on the environmnet, eg
 There are built in hooks to help with the seperation of view and functionality. A hook allows you to 'hook' a function to a location in the html. This can be done with the [add_action()](https://developer.wordpress.org/reference/functions/add_action/) function.
 
 **Hook list:**
-* hook_before_html
-	* After the opening <body> tag.
-	* File: header.php
-
-* hook_before_header
-	* Before the opening <header> tag.
-	* File: header.php
-
-* hook_top_header
-	* After the opening <header> tag.
-	* File: header.php
-
-* hook_bottom_header
-	* Before the closing </header> tag.
-	* File: header.php
-
-* hook_after_header
-	* After the closing </header> tag.
-	* File: header.php
-
-* hook_before_content
-	* Before the opening <div id="content"> tag.
-	* File: header.php
-
-* hook_top_content
-	* After the opening <div id="content"> tag.
-	* File: header.php
-
-* hook_bottom_content
-	* Before the closing id="content" </div> tag.
-	* File: footer.php
-
-* hook_after_content
-	* After the closing id="content" </div> tag.
-	* File: footer.php
-
-* hook_before_aside
-	* Before the opening <aside> tag.
-	* File: sidebar.php
-
-* hook_top_aside
-	* After the opening <aside> tag.
-	* File: sidebar.php
-
-* hook_bottom_aside
-	* Before the closing </aside> tag.
-	* File: sidebar.php
-
-* hook_after_aside
-	* After the closing </aside> tag.
-	* File: sidebar.php
-
-* hook_before_footer
-	* Before opening <footer> tag.
-	* File: footer.php
-
-* hook_top_footer
-	* After opening <footer> tag.
-	* File: footer.php
-
-* hook_bottom_footer
-	* Before closing </footer> tag.
-	* File: footer.php
-
-* hook_after_footer
-	* After closing </footer> tag.
-	* File: footer.php
-
-* hook_after_html
-	* Before the closing </body> tag.
-	* File: footer.php
-
+You bet there is, slightly long to be in a readme file so I kept it in a safe location - [hook list](https://github.com/DestinationGoldCoast/dgc/wiki/Hook-List)
 
 ## Production ##
 As part of the build process, there is a gulp task to get some files ready for production, the need to know:
