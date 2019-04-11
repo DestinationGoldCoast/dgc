@@ -1,6 +1,5 @@
 # DGC #
 
-
 ## Development ##
 You will find a "build" folder, this is where you will find all the good things like a home for SASS, JS and a sprinkle of GULP.
 
