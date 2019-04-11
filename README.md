@@ -29,16 +29,32 @@ Once you have gulp running, you just need to run 'gulp watch' from the cmd promo
 Note: The stylesheet that is enqueued will vary depending on the environmnet, eg, localhost:81 is my local environmnet so a non minified stylesheet is loaded.
 
 ### Hooks: ###
-There are built in hooks to help with the seperation of view and functionality. A hook allows you to 'hook' a function to a location in the html.
+There are built in hooks to help with the seperation of view and functionality. A hook allows you to 'hook' a function to a location in the html. This can be done with the [add_action()](https://developer.wordpress.org/reference/functions/add_action/) function.
 
 **Hook list:**
 * hook_before_html
 	* After the opening <body> tag.
-	* Template: header.php
+	* File: header.php
+
+* hook_before_header
+	* Before the opening <header> tag.
+	* File: header.php
+
+* hook_top_header
+	* After the opening <header> tag.
+	* File: header.php
+
+* hook_bottom_header
+	* Before the closing </header> tag.
+	* File: header.php
+
+* hook_after_header
+	* After the closing </header> teg.
+	* File: header.php
 
 * hook_after_html
 	* Before the closing </body> tag.
-	* Template: footer.php
+	* File: footer.php
 
 
 ## Production ##

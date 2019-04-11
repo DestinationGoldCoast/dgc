@@ -27,7 +27,9 @@
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'dgc' ); ?></a>
 
+	<?php do_action( 'hook_before_header' ); ?>
 	<header id="masthead" class="site-header">
+		<?php do_action( 'hook_top_header' ); ?>
 		<div class="container">
 			<div class="row">
 				<div class="col-8 col-md-4 site-branding">
@@ -60,7 +62,9 @@
 				</nav><!-- #site-navigation -->
 			</div>
 		</div>
+		<?php do_action( 'hook_bottom_header' ); ?>
 	</header><!-- #masthead -->
+	<?php do_action( 'hook_after_header' ); ?>
 
 	<div id="content" class="site-content">
 		<div class="container">
