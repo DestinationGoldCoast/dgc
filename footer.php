@@ -12,7 +12,9 @@
 ?>
 			</div><!-- .row -->
 		<div><!-- .container -->
+		<?php do_action( 'hook_bottom_content' ); ?>
 	</div><!-- #content -->
+	<?php do_action( 'hook_after_content' ); ?>
 
 	<footer id="colophon" class="site-footer">
 		<div class="container">

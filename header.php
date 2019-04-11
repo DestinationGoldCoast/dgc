@@ -66,6 +66,8 @@
 	</header><!-- #masthead -->
 	<?php do_action( 'hook_after_header' ); ?>
 
+	<?php do_action( 'hook_before_content' ); ?>
 	<div id="content" class="site-content">
+		<?php do_action( 'hook_top_content' ); ?>
 		<div class="container">
 			<div class="row">

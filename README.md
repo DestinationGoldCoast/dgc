@@ -49,8 +49,24 @@ There are built in hooks to help with the seperation of view and functionality. 
 	* File: header.php
 
 * hook_after_header
-	* After the closing </header> teg.
+	* After the closing </header> tag.
 	* File: header.php
+
+* hook_before_content
+	* Before the opening <div id="content"> tag.
+	* File: header.php
+
+* hook_top_content
+	* After the opening <div id="content"> tag.
+	* File: header.php
+
+* hook_bottom_content
+	* Before the closing id="content" </div> tag.
+	* File footer.php
+
+* hook_after_content
+	* After the closing id="content" </div> tag.
+	* File footer.php
 
 * hook_after_html
 	* Before the closing </body> tag.
