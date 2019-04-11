@@ -10,9 +10,13 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+	<?php do_action( 'hook_before_page_header' ); ?>
 	<header class="entry-header">
+		<?php do_action( 'hook_top_page_header' ); ?>
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+		<?php do_action( 'hook_bottom_page_header' ); ?>
 	</header><!-- .entry-header -->
+	<?php do_action( 'hook_after_page_header' ); ?>
 
 	<?php dgc_post_thumbnail(); ?>
 

@@ -15,12 +15,16 @@ get_header();
 
 		<?php if ( have_posts() ) : ?>
 
+			<?php do_action( 'hook_before_page_header' ); ?>
 			<header class="page-header">
+				<?php do_action( 'hook_top_page_header' ); ?>
 				<?php
 				the_archive_title( '<h1 class="page-title">', '</h1>' );
 				the_archive_description( '<div class="archive-description">', '</div>' );
 				?>
+				<?php do_action( 'hook_bottom_page_header' ); ?>
 			</header><!-- .page-header -->
+			<?php do_action( 'hook_after_page_header' ); ?>
 
 			<?php
 			/* Start the Loop */

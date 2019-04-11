@@ -23,9 +23,13 @@ get_header();
 
 			if ( is_home() && ! is_front_page() ) :
 				?>
+				<?php do_action( 'hook_before_page_header' ); ?>
 				<header>
+					<?php do_action( 'hook_top_page_header' ); ?>
 					<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
+					<?php do_action( 'hook_bottom_page_header' ); ?>
 				</header>
+				<?php do_action( 'hook_after_page_header' ); ?>
 				<?php
 			endif;
 

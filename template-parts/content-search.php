@@ -10,7 +10,9 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+	<?php do_action( 'hook_before_page_header' ); ?>
 	<header class="entry-header">
+		<?php do_action( 'hook_top_page_header' ); ?>
 		<?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
 
 		<?php if ( 'post' === get_post_type() ) : ?>
@@ -21,7 +23,9 @@
 			?>
 		</div><!-- .entry-meta -->
 		<?php endif; ?>
+		<?php do_action( 'hook_bottom_page_header' ); ?>
 	</header><!-- .entry-header -->
+	<?php do_action( 'hook_after_page_header' ); ?>
 
 	<?php dgc_post_thumbnail(); ?>
 
