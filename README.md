@@ -28,6 +28,9 @@ Once you have gulp running, you just need to run 'gulp watch' from the cmd promo
 
 Note: The stylesheet that is enqueued will vary depending on the environmnet, eg, localhost:81 is my local environmnet so a non minified stylesheet is loaded.
 
+**REM**
+The <body> tag has a font-size of 10px for your rem computed value, eg, if you set the <p> font-size to 1.6rem it will be 16px. As you can see this makes calculation easy and for different media queries you can also easily change all rem calculated properties by changing the body size.
+
 ### Hooks: ###
 There are built in hooks to help with the seperation of view and functionality. A hook allows you to 'hook' a function to a location in the html. This can be done with the [add_action()](https://developer.wordpress.org/reference/functions/add_action/) function.
 
