@@ -32,7 +32,9 @@
 	</div><!-- .entry-content -->
 
 	<?php if ( get_edit_post_link() ) : ?>
+		<?php do_action( 'hook_before_page_footer' ); ?>
 		<footer class="entry-footer">
+			<?php do_action( 'hook_top_page_footer' ); ?>
 			<?php
 			edit_post_link(
 				sprintf(
@@ -51,6 +53,8 @@
 				'</span>'
 			);
 			?>
+			<?php do_action( 'hook_bottom_page_footer' ); ?>
 		</footer><!-- .entry-footer -->
+		<?php do_action( 'hook_after_page_footer' ); ?>
 	<?php endif; ?>
 </article><!-- #post-<?php the_ID(); ?> -->

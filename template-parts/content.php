@@ -57,7 +57,13 @@
 		?>
 	</div><!-- .entry-content -->
 
+	<?php do_action( 'hook_before_page_footer' ); ?>
 	<footer class="entry-footer">
+		<?php do_action( 'hook_top_page_footer' ); ?>
+
 		<?php dgc_entry_footer(); ?>
+
+		<?php do_action( 'hook_bottom_page_footer' ); ?>
 	</footer><!-- .entry-footer -->
+	<?php do_action( 'hook_after_page_footer' ); ?>
 </article><!-- #post-<?php the_ID(); ?> -->
