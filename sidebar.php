@@ -11,13 +11,14 @@ if ( ! is_active_sidebar( 'sidebar-1' ) ) {
 	return;
 }
 ?>
+<div class="col-sm-12 col-md-4">
+	<?php do_action( 'hook_before_aside' ); ?>
+	<aside id="secondary" class="widget-area">
+		<?php do_action( 'hook_top_aside' ); ?>
 
-<?php do_action( 'hook_before_aside' ); ?>
-<aside id="secondary" class="col-sm-12 col-md-4 widget-area">
-	<?php do_action( 'hook_top_aside' ); ?>
+		<?php dynamic_sidebar( 'sidebar-1' ); ?>
 
-	<?php dynamic_sidebar( 'sidebar-1' ); ?>
-
-	<?php do_action( 'hook_bottom_aside' ); ?>
-</aside><!-- #secondary -->
-<?php do_action( 'hook_after_aside' ); ?>
+		<?php do_action( 'hook_bottom_aside' ); ?>
+	</aside><!-- #secondary -->
+	<?php do_action( 'hook_after_aside' ); ?>
+</div>
