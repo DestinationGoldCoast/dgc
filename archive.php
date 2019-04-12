@@ -11,7 +11,9 @@ get_header();
 ?>
 
 	<div id="primary" class="col-sm-12 col-md-8 content-area">
-		<main id="main" class="site-main">
+		<?php do_action( 'hook_before_page_main' ); ?>
+				<main id="main" class="site-main">
+					<?php do_action( 'hook_top_page_main' ); ?>
 
 		<?php if ( have_posts() ) : ?>
 
@@ -49,7 +51,9 @@ get_header();
 		endif;
 		?>
 
+		<?php do_action( 'hook_bottom_page_main' ); ?>
 		</main><!-- #main -->
+		<?php do_action( 'hook_after_page_main' ); ?>
 	</div><!-- #primary -->
 
 <?php
