@@ -16,16 +16,22 @@ get_header();
 ?>
 
 	<div id="primary" class="col-sm-12 col-md-8 content-area">
-		<main id="main" class="site-main">
+		<?php do_action( 'hook_before_page_main' ); ?>
+			<main id="main" class="site-main">
+				<?php do_action( 'hook_top_page_main' ); ?>
 
 		<?php
 		if ( have_posts() ) :
 
 			if ( is_home() && ! is_front_page() ) :
 				?>
+				<?php do_action( 'hook_before_page_header' ); ?>
 				<header>
+					<?php do_action( 'hook_top_page_header' ); ?>
 					<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
+					<?php do_action( 'hook_bottom_page_header' ); ?>
 				</header>
+				<?php do_action( 'hook_after_page_header' ); ?>
 				<?php
 			endif;
 
@@ -51,7 +57,9 @@ get_header();
 		endif;
 		?>
 
+		<?php do_action( 'hook_bottom_page_main' ); ?>
 		</main><!-- #main -->
+		<?php do_action( 'hook_after_page_main' ); ?>
 	</div><!-- #primary -->
 
 <?php

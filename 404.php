@@ -11,12 +11,18 @@ get_header();
 ?>
 
 	<div id="primary" class="col-sm-12 col-md-8 content-area">
-		<main id="main" class="site-main">
+		<?php do_action( 'hook_before_page_main' ); ?>
+			<main id="main" class="site-main">
+			<?php do_action( 'hook_top_page_main' ); ?>
 
 			<section class="error-404 not-found">
+				<?php do_action( 'hook_before_page_header' ); ?>
 				<header class="page-header">
+					<?php do_action( 'hook_top_page_header' ); ?>
 					<h1 class="page-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'dgc' ); ?></h1>
+					<?php do_action( 'hook_bottom_page_header' ); ?>
 				</header><!-- .page-header -->
+				<?php do_action( 'hook_after_page_header' ); ?>
 
 				<div class="page-content">
 					<p><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?', 'dgc' ); ?></p>
@@ -53,7 +59,9 @@ get_header();
 				</div><!-- .page-content -->
 			</section><!-- .error-404 -->
 
+			<?php do_action( 'hook_bottom_page_main' ); ?>
 		</main><!-- #main -->
+		<?php do_action( 'hook_after_page_main' ); ?>
 	</div><!-- #primary -->
 
 <?php

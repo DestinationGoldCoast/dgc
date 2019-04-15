@@ -11,7 +11,9 @@ get_header();
 ?>
 
 	<div id="primary" class="col content-area">
+		<?php do_action( 'hook_before_page_main' ); ?>
 		<main id="main" class="site-main">
+			<?php do_action( 'hook_top_page_main' ); ?>
 
 		<?php
 		while ( have_posts() ) :
@@ -29,7 +31,9 @@ get_header();
 		endwhile; // End of the loop.
 		?>
 
+		<?php do_action( 'hook_bottom_page_main' ); ?>
 		</main><!-- #main -->
+		<?php do_action( 'hook_after_page_main' ); ?>
 	</div><!-- #primary -->
 
 <?php

@@ -10,9 +10,13 @@
 ?>
 
 <section class="no-results not-found">
+	<?php do_action( 'hook_before_page_header' ); ?>
 	<header class="page-header">
+		<?php do_action( 'hook_top_page_header' ); ?>
 		<h1 class="page-title"><?php esc_html_e( 'Nothing Found', 'dgc' ); ?></h1>
+		<?php do_action( 'hook_bottom_page_header' ); ?>
 	</header><!-- .page-header -->
+	<?php do_action( 'hook_after_page_header' ); ?>
 
 	<div class="page-content">
 		<?php

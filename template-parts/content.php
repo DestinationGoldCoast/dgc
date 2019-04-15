@@ -10,7 +10,9 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+	<?php do_action( 'hook_before_page_header' ); ?>
 	<header class="entry-header">
+		<?php do_action( 'hook_top_page_header' ); ?>
 		<?php
 		if ( is_singular() ) :
 			the_title( '<h1 class="entry-title">', '</h1>' );
@@ -27,7 +29,9 @@
 				?>
 			</div><!-- .entry-meta -->
 		<?php endif; ?>
+		<?php do_action( 'hook_bottom_page_header' ); ?>
 	</header><!-- .entry-header -->
+	<?php do_action( 'hook_after_page_header' ); ?>
 
 	<?php dgc_post_thumbnail(); ?>
 
@@ -53,7 +57,13 @@
 		?>
 	</div><!-- .entry-content -->
 
+	<?php do_action( 'hook_before_page_footer' ); ?>
 	<footer class="entry-footer">
+		<?php do_action( 'hook_top_page_footer' ); ?>
+
 		<?php dgc_entry_footer(); ?>
+
+		<?php do_action( 'hook_bottom_page_footer' ); ?>
 	</footer><!-- .entry-footer -->
+	<?php do_action( 'hook_after_page_footer' ); ?>
 </article><!-- #post-<?php the_ID(); ?> -->
