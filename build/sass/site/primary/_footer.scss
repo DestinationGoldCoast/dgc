@@ -1,0 +1,47 @@
+.site-footer {
+    background-color: $dgc_black;
+    color: $dgc_warm_grey;
+    padding: 36px 0;
+    a {
+        color: $dgc_warm_grey;
+        &:hover,
+        &:focus {
+            color: $dgc_white;
+        }
+    }
+    .widget {
+        &.widget_nav_menu {
+            ul {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                font-size: 1.5rem;
+                justify-content: space-between;
+                list-style: none;
+                margin: 0;
+                padding: 0;
+            }
+        }
+        .widget-title {
+            color: $dgc_white;
+            font-size: 2.4rem;
+            font-weight: bold;
+            line-height: 1.1;
+            margin-top: 3rem;
+            margin-bottom: 1rem;
+        }
+        p {
+            font-size: 1.8rem;
+        }
+    }
+    .copyright,
+    .footer-widget {
+        margin-top: 2rem;
+    }
+    .copyright {
+        p {
+            font-size: 1.5rem;
+            margin: 0;
+        }
+    }
+}

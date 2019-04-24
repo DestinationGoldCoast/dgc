@@ -55,7 +55,7 @@ var watch = require('gulp-watch');
  */
 gulp.task('sass', function() {
     return gulp.src('sass/**/*.scss')
-        .pipe(sass())
+        .pipe(sass({ outputStyle: 'expanded' }).on('error', sass.logError))
         .pipe(autoprefixer({
             browsers: ['last 2 versions'],
             cascade: false
