@@ -1,22 +1,3 @@
-$color__background-body: #fff;
-$color__background-screen: #f1f1f1;
-$color__background-hr: #ccc;
-$color__background-button: #e6e6e6;
-$color__background-pre: #eee;
-$color__background-ins: #fff9c0;
-$color__text-screen: #21759b;
-$color__text-input: #666;
-$color__text-input-focus: #111;
-$color__link: royalblue;
-$color__link-visited: purple;
-$color__link-hover: midnightblue;
-$color__text-main: #404040;
-$color__border-button: #ccc #ccc #bbb;
-$color__border-button-hover: #ccc #bbb #aaa;
-$color__border-button-focus: #aaa #bbb #bbb;
-$color__border-input: #ccc;
-$color__border-abbr: #666;
-
 /*--------------------------------------------------------------
 ## DGC Colour Palette
 --------------------------------------------------------------*/
@@ -28,3 +9,26 @@ $dgc_watermelon: #c4004b;
 $dgc_charcoal: #484545;
 $dgc_cool_grey: #747e79;
 $dgc_warm_grey: #b5b0a9;
+
+/*--------------------------------------------------------------
+## _s Generated Color Vars - Assign DGC var to them.
+--------------------------------------------------------------*/
+
+$color__background-body: $dgc_white;
+$color__background-screen: $dgc_warm_grey;
+$color__background-hr: $dgc_warm_grey;
+$color__background-button: $dgc_warm_grey;
+$color__background-pre: $dgc_warm_grey;
+$color__background-ins: #fff9c0;
+$color__text-screen: $dgc_teal;
+$color__text-input: $dgc_charcoal;
+$color__text-input-focus: $dgc_black;
+$color__link: $dgc_black;
+$color__link-visited: $dgc_black;
+$color__link-hover: $dgc_teal;
+$color__text-main: $dgc_black;
+$color__border-button: $dgc_warm_grey;
+$color__border-button-hover: $dgc_black;
+$color__border-button-focus: $dgc_cool_grey;
+$color__border-input: $dgc_warm_grey;
+$color__border-abbr: $dgc_cool_grey;
