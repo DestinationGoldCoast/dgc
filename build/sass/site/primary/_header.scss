@@ -1,4 +1,35 @@
 .site-header {
+    .pre-header {
+        background: $dgc_black;
+        color: $dgc_warm_grey;
+        .menu {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            font-size: 1.2rem;
+            justify-content: flex-end;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            li {
+                line-height: 6rem;
+                padding-right: 2rem;
+                padding-left: 2rem;
+                a {
+                    color: $dgc_warm_grey;
+                    text-decoration: none;
+                    text-transform: uppercase;
+                    &:hover {
+                        color: $dgc_white;
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+        .widget {
+            margin: 0;
+        }
+    }
     .main-navigation {
         .menu-toggle {}
         .nav-menu {
