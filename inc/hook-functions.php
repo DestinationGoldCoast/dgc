@@ -13,7 +13,7 @@ function dgc_add_other_site_html() {
 		<a id="other-site-overlay" class="other-site-overlay" href="#"></a>
 		<div id="other-site-modal" class="other-site-modal">
 			<div class="container">
-				<img src="https://via.placeholder.com/1140x100.png?text=Widget+in+hook+functions.php" />
+				<img src="https://via.placeholder.com/1140x100.png?text=Widget+in+inc/hook-functions.php" />
 			</div>
 		</div>
 		<button id="other-site-button" class="other-site-button">View other Gold Coast sites</button>
