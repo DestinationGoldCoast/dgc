@@ -30,36 +30,21 @@
 	<?php do_action( 'hook_before_header' ); ?>
 	<header id="masthead" class="site-header">
 		<?php do_action( 'hook_top_header' ); ?>
-		<div class="container">
+		<div class="header-menu container">
 			<div class="row">
-				<div class="col-8 col-md-4 site-branding">
-					<?php
-					the_custom_logo();
-					if ( is_front_page() && is_home() ) :
-						?>
-						<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-						<?php
-					else :
-						?>
-						<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-						<?php
-					endif;
-					$dgc_description = get_bloginfo( 'description', 'display' );
-					if ( $dgc_description || is_customize_preview() ) :
-						?>
-						<p class="site-description"><?php echo $dgc_description; /* WPCS: xss ok. */ ?></p>
-					<?php endif; ?>
-				</div><!-- .site-branding -->
+					<div class="col-8 col-md-3 site-branding">
+						<img src="../wp-content/themes/dgc/assets/logo-dgc.svg" alt="Destination Gold Coast" width="190">
+					</div><!-- .site-branding -->
 
-				<nav id="site-navigation" class="col-4 col-md-8 main-navigation">
-					<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Menu', 'dgc' ); ?></button>
-					<?php
-					wp_nav_menu( array(
-						'theme_location' => 'menu-1',
-						'menu_id'        => 'primary-menu',
-					) );
-					?>
-				</nav><!-- #site-navigation -->
+					<nav id="site-navigation" class="col-4 col-md-9 main-navigation">
+						<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Menu', 'dgc' ); ?></button>
+						<?php
+						wp_nav_menu( array(
+							'theme_location' => 'menu-1',
+							'menu_id'        => 'primary-menu',
+						) );
+						?>
+					</nav><!-- #site-navigation -->
 			</div>
 		</div>
 		<?php do_action( 'hook_bottom_header' ); ?>

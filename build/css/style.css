@@ -8232,22 +8232,26 @@ a:hover, a:active {
   margin: 0;
 }
 
-.site-header .main-navigation .nav-menu li {
+.site-header .header-menu {
+  padding: 3.3rem 0;
+}
+
+.site-header .header-menu .main-navigation .nav-menu li {
   margin-right: 3.5rem;
 }
 
-.site-header .main-navigation .nav-menu li a {
+.site-header .header-menu .main-navigation .nav-menu li a {
   color: #000000;
   font-size: 1.8rem;
   font-weight: bold;
   padding: 0 1rem;
 }
 
-.site-header .main-navigation .nav-menu li a:hover, .site-header .main-navigation .nav-menu li a:focus {
+.site-header .header-menu .main-navigation .nav-menu li a:hover, .site-header .header-menu .main-navigation .nav-menu li a:focus {
   color: #218fa3;
 }
 
-.site-header .main-navigation .nav-menu li.page_item_has_children > a:after {
+.site-header .header-menu .main-navigation .nav-menu li.menu-item-has-children > a:after {
   border-style: solid;
   border-width: 1px 1px 0 0;
   content: '';
@@ -8266,13 +8270,13 @@ a:hover, a:active {
   width: 0.8rem;
 }
 
-.site-header .main-navigation .nav-menu li.page_item_has_children > a:hover:after {
+.site-header .header-menu .main-navigation .nav-menu li.menu-item-has-children > a:hover:after {
   top: 0rem;
   -webkit-transform: rotate(-45deg);
   transform: rotate(-45deg);
 }
 
-.site-header .main-navigation .nav-menu .children {
+.site-header .header-menu .main-navigation .nav-menu .sub-menu {
   background: #000000;
   -webkit-transition: -webkit-transform .3s ease-in-out;
   transition: -webkit-transform .3s ease-in-out;
@@ -8280,12 +8284,12 @@ a:hover, a:active {
   transition: transform .3s ease-in-out, -webkit-transform .3s ease-in-out;
 }
 
-.site-header .main-navigation .nav-menu .children li a {
+.site-header .header-menu .main-navigation .nav-menu .sub-menu li a {
   color: #b5b0a9;
   font-weight: normal;
 }
 
-.site-header .main-navigation .nav-menu .children li a:hover, .site-header .main-navigation .nav-menu .children li a:focus {
+.site-header .header-menu .main-navigation .nav-menu .sub-menu li a:hover, .site-header .header-menu .main-navigation .nav-menu .sub-menu li a:focus {
   color: #ffffff;
 }
 
