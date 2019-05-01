@@ -12,9 +12,11 @@ function dgc_add_other_site_html() {
 	<div class="other-sites">
 		<a id="other-site-overlay" class="other-site-overlay" href="#"></a>
 		<div id="other-site-modal" class="other-site-modal">
-			<p>the html needed can be put in here</p>
+			<div class="container">
+				<img src="https://via.placeholder.com/1140x100.png?text=Widget+in+hook+functions.php" />
+			</div>
 		</div>
-		<button id="other-site-button" class="other-site-nav">View other Gold Coast sites</button>
+		<button id="other-site-button" class="other-site-button">View other Gold Coast sites</button>
 	</div>
 	<?php
 }
