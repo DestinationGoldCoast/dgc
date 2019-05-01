@@ -153,6 +153,9 @@ function dgc_scripts() {
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
+
+	// TODO : Need a production js file.
+	wp_enqueue_script( 'dgc-js', trailingslashit( get_template_directory_uri() ) . 'build/js/theme.js', array( 'jquery' ), '20151215', true );
 }
 add_action( 'wp_enqueue_scripts', 'dgc_scripts' );
 
