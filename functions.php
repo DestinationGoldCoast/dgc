@@ -122,6 +122,15 @@ function dgc_widgets_init() {
 		'before_title'  => '<h2 class="widget-title">',
 		'after_title'   => '</h2>',
 	) );
+	register_sidebar( array(
+		'name'          => esc_html__( 'Pre Header Menu', 'dgc' ),
+		'id'            => 'pre-header-menu',
+		'description'   => esc_html__( 'Widget area in the header', 'dgc' ),
+		'before_widget' => '<div id="pre-header" class="widget %2$s">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
+	) );
 }
 add_action( 'widgets_init', 'dgc_widgets_init' );
 
@@ -131,9 +140,13 @@ add_action( 'widgets_init', 'dgc_widgets_init' );
 function dgc_scripts() {
 	if ( 'localhost:81' != $_SERVER['HTTP_HOST'] ) :
 		// Time to get the minified style.css
-		wp_enqueue_style( 'dgc-style-build', trailingslashit( get_template_directory_uri() ) . '/style.css' );
+		wp_enqueue_style( 'dgc-style-build', trailingslashit( get_template_directory_uri() ) . 'style.css' );
+
+		wp_enqueue_script( 'dgc-js', trailingslashit( get_template_directory_uri() ) . 'js/theme-min.js', array( 'jquery' ), '20151215', true );
 	else :
 		wp_enqueue_style( 'dgc-style', trailingslashit( get_template_directory_uri() ) . 'build/css/style.css' );
+
+		wp_enqueue_script( 'dgc-js', trailingslashit( get_template_directory_uri() ) . 'build/js/theme.js', array( 'jquery' ), '20151215', true );
 	endif;
 
 
@@ -161,6 +174,11 @@ require get_template_directory() . '/inc/template-tags.php';
  * Functions which enhance the theme by hooking into WordPress.
  */
 require get_template_directory() . '/inc/template-functions.php';
+
+/**
+ * Functions which enhance the theme by hooking into the theme hooks.
+ */
+require get_template_directory() . '/inc/hook-functions.php';
 
 /**
  * Customizer additions.
