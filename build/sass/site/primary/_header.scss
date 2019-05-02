@@ -98,12 +98,15 @@
         .main-navigation {
             .menu-toggle {}
             .nav-menu {
+                display: table-cell;
+                height: 60px;
+                vertical-align: bottom;
                 li {
                     margin-right: 3.5rem;
+                    text-transform: uppercase;
                     a {
                         color: $dgc_black;
                         font-size: 1.8rem;
-                        font-weight: bold;
                         padding: 0 1rem;
                         &:hover,
                         &:focus {

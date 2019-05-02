@@ -8236,14 +8236,20 @@ a:hover, a:active {
   padding: 3.3rem 0;
 }
 
+.site-header .header-menu .main-navigation .nav-menu {
+  display: table-cell;
+  height: 60px;
+  vertical-align: bottom;
+}
+
 .site-header .header-menu .main-navigation .nav-menu li {
   margin-right: 3.5rem;
+  text-transform: uppercase;
 }
 
 .site-header .header-menu .main-navigation .nav-menu li a {
   color: #000000;
   font-size: 1.8rem;
-  font-weight: bold;
   padding: 0 1rem;
 }
 
