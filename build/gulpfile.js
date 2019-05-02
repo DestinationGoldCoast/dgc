@@ -19,7 +19,7 @@ var gulp = require('gulp');
 var sass = require('gulp-sass');
 
 /**
- * GULP Auto prefixer
+ * GULP Auto prefixer.
  * @requires gulp-autoprefixer.
  * @description adds prefixes for cross-browser compatibility.
  * @link https://www.npmjs.com/package/gulp-autoprefixer
@@ -29,7 +29,7 @@ var sass = require('gulp-sass');
 var autoprefixer = require('gulp-autoprefixer');
 
 /**
- * GULP Minify
+ * GULP Minify CSS.
  * @requires gulp-csso
  * @description minifies
  * @link https://www.npmjs.com/package/gulp-csso
@@ -37,6 +37,16 @@ var autoprefixer = require('gulp-autoprefixer');
  * in the build folder to include.
  */
 var csso = require('gulp-csso');
+
+/**
+ * GULP Minify JS.
+ * @requires gulp-minify
+ * @description minifies js
+ * @link https://www.npmjs.com/package/gulp-minify
+ * Run 'npm install gulp-minify --save-dev' from the command prompt when
+ * in the build folder to include.
+ */
+var minifyJS = require('gulp-minify');
 
 /**
  * GULP Watch.
@@ -60,18 +70,29 @@ gulp.task('sass', function() {
             browsers: ['last 2 versions'],
             cascade: false
         }))
-        .pipe(gulp.dest('css'))
+        .pipe(gulp.dest('css'));
 });
 
 /**
- * Minify.
+ * Minify CSS.
  * @requires gulp-csso
  * @description minifies the css for production
  */
 gulp.task('min-css', function() {
     return gulp.src('css/style.css')
         .pipe(csso())
-        .pipe(gulp.dest('../'))
+        .pipe(gulp.dest('../'));
+});
+
+/**
+ * Minify JS.
+ * @requires gulp-minify
+ * @description minifies the JS for production
+ */
+gulp.task('min-js', function() {
+    return gulp.src('js/theme.js')
+        .pipe(minifyJS())
+        .pipe(gulp.dest('../js/'));
 });
 
 /**
@@ -83,4 +104,5 @@ gulp.task('min-css', function() {
 gulp.task('watch', function() {
     gulp.watch('sass/**/*.scss', gulp.series('sass'));
     gulp.watch('css/style.css', gulp.series('min-css'));
+    gulp.watch('js/theme.js', gulp.series('min-js'));
 });

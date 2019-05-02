@@ -25,7 +25,7 @@ Each task has a link to the npm package with install instructions (if needed).
 ### Dev Time: ###
 Once you have gulp running, you just need to run 'gulp watch' from the cmd promot while in the build folder. Now you can make changes and everything will recompile.
 
-Note: The stylesheet that is enqueued will vary depending on the environmnet, eg, localhost:81 is my local environmnet so a non minified stylesheet is loaded.
+Note: The style.css and theme.js file that is enqueued will vary depending on the environmnet, eg, localhost:81 is my local environmnet so a non minified stylesheet will be loaded.
 
 **REM**
 The `<html>` tag has a font-size of 10px for your rem computed value, eg, if you set the `<p>` font-size to 1.6rem it will be 16px. This makes calculation straight forward and for different media queries you can also easily change all rem calculated properties by changing the `<html>` size.

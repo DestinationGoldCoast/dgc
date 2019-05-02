@@ -140,9 +140,13 @@ add_action( 'widgets_init', 'dgc_widgets_init' );
 function dgc_scripts() {
 	if ( 'localhost:81' != $_SERVER['HTTP_HOST'] ) :
 		// Time to get the minified style.css
-		wp_enqueue_style( 'dgc-style-build', trailingslashit( get_template_directory_uri() ) . '/style.css' );
+		wp_enqueue_style( 'dgc-style-build', trailingslashit( get_template_directory_uri() ) . 'style.css' );
+
+		wp_enqueue_script( 'dgc-js', trailingslashit( get_template_directory_uri() ) . 'js/theme-min.js', array( 'jquery' ), '20151215', true );
 	else :
 		wp_enqueue_style( 'dgc-style', trailingslashit( get_template_directory_uri() ) . 'build/css/style.css' );
+
+		wp_enqueue_script( 'dgc-js', trailingslashit( get_template_directory_uri() ) . 'build/js/theme.js', array( 'jquery' ), '20151215', true );
 	endif;
 
 
@@ -153,9 +157,6 @@ function dgc_scripts() {
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
-
-	// TODO : Need a production js file.
-	wp_enqueue_script( 'dgc-js', trailingslashit( get_template_directory_uri() ) . 'build/js/theme.js', array( 'jquery' ), '20151215', true );
 }
 add_action( 'wp_enqueue_scripts', 'dgc_scripts' );
 

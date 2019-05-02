@@ -1,0 +1,1 @@
+!function(s){"use strict";s("#other-site-button").click(function(){s(this).addClass("up"),s("#other-site-overlay").addClass("show"),s("#other-site-modal").addClass("show")}),s("#other-site-overlay").click(function(){s(this).removeClass("show"),s("#other-site-button").removeClass("up"),s("#other-site-modal").removeClass("show")})}(jQuery);
