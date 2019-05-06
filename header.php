@@ -33,7 +33,7 @@
 		<div class="header-menu container">
 			<div class="row">
 					<div class="col-8 col-md-3 site-branding">
-						<img src="../wp-content/themes/dgc/assets/logo-dgc.svg" alt="Destination Gold Coast" width="190">
+						<img src="https://www.destinationgoldcoast.com/Portals/0/Skins/DGC/assets/images/logo-dgc.svg" alt="Destination Gold Coast" width="190">
 					</div><!-- .site-branding -->
 
 					<nav id="site-navigation" class="col-4 col-md-9 main-navigation">
